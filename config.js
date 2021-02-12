@@ -4,7 +4,7 @@
  * const filePath = 'D:\\csv\\Data.csv'; --To read from local machine
  * const filePath = './csv/Data.csv'; --To read from application folder structure
  */
-const filePath = 'D:\\csv\\Data.csv';
+const filePath = './csv/Data.csv';
 module.exports = {
     filePath
 }
