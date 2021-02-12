@@ -2,6 +2,8 @@ const express = require("express");
 const app = express("");
 
 const readCSV = require("./api/routes/readCSV");
+const checkDeployment=require("./api/routes/deployementRoute");
+app.use("/", checkDeployment);
 app.use("/readCSV", readCSV);
 app.use((req, res, next) => {
   const error = new Error("Not Found");
