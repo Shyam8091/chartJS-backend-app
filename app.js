@@ -3,13 +3,6 @@ const app = express("");
 
 const readCSV = require("./api/routes/readCSV");
 const checkDeployment=require("./api/routes/deployementRoute");
-var cron = require('node-cron');
- cron.schedule('*/28 * * * *', () => {
- function fetchData(req, res) {
-    console.log("called every 3 sec");
-  };
-  fetchData();
-});
 
 app.use("/", checkDeployment);
 app.use("/readCSV", readCSV);
